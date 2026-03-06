@@ -1,0 +1,15 @@
+name: WindowsVM
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    steps:
+      - name: Keep VM Alive
+        run: |
+          echo Windows VM running
+          ipconfig
+          timeout /t 21600
