@@ -8,8 +8,8 @@ jobs:
     runs-on: windows-latest
 
     steps:
-      - name: Keep VM Alive
+      - name: Start Windows VM
         run: |
-          echo Windows VM running
+          echo Windows VM started
           ipconfig
-          timeout /t 21600
+          ping -n 21600 127.0.0.1 > nul
